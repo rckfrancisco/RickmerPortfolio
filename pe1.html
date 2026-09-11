@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Hardware Basics Training | Rickmer Francisco</title>
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bg-color: #F2F9FF;
+            --second-bg-color: #E8F9FF;
+            --text-color: #2D336B;
+            --main-color: #2185D5;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            width: 100%;
+            padding: 2rem 9%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-color);
+            border-bottom: .1rem solid rgba(0, 0, 0, .1);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .training-details {
+            min-height: 100vh;
+            padding: 10rem 9% 6rem;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 4.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .heading span {
+            color: var(--main-color);
+        }
+
+        /* =========================
+           TRAINING HEADER
+        ========================= */
+
+        .training-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .training-header i {
+            font-size: 7rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .training-header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .training-header p {
+            font-size: 1.6rem;
+        }
+
+        /* =========================
+           CONTENT CONTAINER
+        ========================= */
+
+        .training-content {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .training-card {
+            background: var(--second-bg-color);
+            padding: 3rem;
+            border-radius: 2rem;
+            border: .2rem solid transparent;
+            transition: .5s ease;
+        }
+
+        .training-card:hover {
+            border-color: var(--main-color);
+            transform: translateY(-.5rem);
+            box-shadow: 0 0 1.5rem rgba(33, 133, 213, .2);
+        }
+
+        .training-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--main-color);
+        }
+
+        .training-card h3 {
+            font-size: 1.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .training-card p {
+            font-size: 1.5rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .training-card ul {
+            padding-left: 2rem;
+        }
+
+        .training-card li {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* =========================
+           CERTIFICATE
+        ========================= */
+
+        .certificate {
+            text-align: center;
+        }
+
+        .certificate img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 1.5rem;
+            border: .2rem solid var(--bg-color);
+            box-shadow: 0 0 1rem rgba(33, 133, 213, .15);
+            transition: .5s ease;
+        }
+
+        .certificate img:hover {
+            transform: scale(1.02);
+        }
+
+        .certificate h3 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        .certificate p {
+            font-size: 1.4rem;
+            margin-top: .5rem;
+        }
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn-container {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: var(--main-color);
+            border-radius: 4rem;
+            box-shadow: 0 0 1rem var(--main-color);
+            font-size: 1.6rem;
+            color: white;
+            letter-spacing: .1rem;
+            font-weight: 600;
+            transition: .5s ease;
+        }
+
+        .btn:hover {
+            box-shadow: none;
+            transform: translateY(-.2rem);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            padding: 2rem 9%;
+            background: var(--second-bg-color);
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 1.5rem;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            html {
+                font-size: 55%;
+            }
+
+            .training-content {
+                grid-template-columns: 1fr;
+            }
+
+            .training-details {
+                padding: 8rem 5% 5rem;
+            }
+
+            .heading {
+                font-size: 4rem;
+            }
+
+            .training-header h1 {
+                font-size: 3.2rem;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 450px) {
+
+            html {
+                font-size: 50%;
+            }
+
+            .header {
+                padding: 2rem 5%;
+            }
+
+            .training-details {
+                padding: 7rem 4% 4rem;
+            }
+
+            .training-card {
+                padding: 2rem;
+            }
+
+            .certificate img {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Rickmer Francisco Logo">
+        </a>
+
+    </header>
+
+
+    <!-- TRAINING DETAILS -->
+
+    <section class="training-details">
+
+        <h2 class="heading">
+            Training <span>Details</span>
+        </h2>
+
+
+        <!-- TRAINING TITLE -->
+
+        <div class="training-header">
+
+            <h1>Python Essentials 1</h1>
+
+            <p>
+                Training and experience in Python Essentials 1 at Cisco Networking Academy
+            </p>
+
+        </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="training-content">
+
+
+            <!-- TRAINING INFORMATION -->
+
+            <div class="training-card">
+
+                <h2>About the Training</h2>
+
+                <p>
+                    This training provided knowledge and practical experience in Python programming fundamentals, including variables, data types, operators, conditional statements, loops, functions, lists, and basic problem-solving and debugging.
+
+                </p>
+
+                <h3>Training Provider</h3>
+
+                <p>
+                    Cisco Networking Academy
+                </p>
+
+                <h3>Date Completed</h3>
+
+                <p>
+                    November 02, 2024
+                </p>
+
+                <h3>Training Duration</h3>
+
+                <p>
+                    30 Hours
+                </p>
+
+            </div>
+
+
+            <!-- SKILLS LEARNED -->
+
+            <div class="training-card">
+
+                <h2>Skills Learned</h2>
+
+                <ul>
+
+                    <li>Python Fundamentals</li>
+
+                    <li>Variables and Data Types</li>
+
+                    <li>Operators</li>
+
+                    <li>Conditional Statements</li>
+
+                    <li>Loops</li>
+
+                    <li>Lists and Basic Data Structures</li>
+
+                    <li>Functions</li>
+
+                    <li>Problem-Solving and Debugging</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CERTIFICATE -->
+
+            <div class="training-card certificate">
+
+                <h2>Certificate</h2>
+
+                <img src="images/certificates/Python Essentials 1.jpg"
+                    alt="Graphic Design Certificate">
+
+                <h3>
+                    Python Essentials 1
+                </h3>
+
+                <p>
+                    Certificate of Completion
+                </p>
+
+            </div>
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="training-card">
+
+                <h2>What I Learned</h2>
+
+                <p>
+                    Through this training, Python Essentials 1 – Cisco Networking Academy
+                    I gained foundational knowledge in Python programming, including variables, data types, operators, conditional statements, loops, functions, and basic data structures. 
+                </p>
+
+                <p>
+                    I also learned to write, test, and debug simple Python programs while developing logical thinking and problem-solving skills. Developed practical experience in creating basic programs and applying programming concepts to solve simple tasks.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="btn-container">
+
+            <a href="index.html#trainings" class="btn">
+                <i class="bx bx-arrow-back"></i>
+                Back to Trainings
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Rickmer Francisco. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
