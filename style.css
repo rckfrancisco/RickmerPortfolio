@@ -533,6 +533,25 @@ span {
     }
 }
 
+.trainings-box.hidden-training {
+    display: none;
+}
+
+.trainings-box.hidden-training.show {
+    display: block; /* change to flex if your .trainings-box uses flex */
+}
+
+.see-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+#seeMoreBtn {
+    border: none;
+    cursor: pointer;
+}
+
 
 /* =========================
    MOBILE
@@ -591,6 +610,14 @@ span {
         width: 90vw;
         margin-top: 4rem;
         height: auto;
+    }
+
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
     }
 
     .trainings h2 {
